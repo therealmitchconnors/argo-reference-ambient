@@ -5,24 +5,25 @@ metadata:
   namespace: argocd
   finalizers:
     - resources-finalizer.argocd.argoproj.io
-project: default
-destination:
-  server: 'http://cluster-gke-cluster:8001'
-  namespace: istio-system
-syncPolicy:
-  automated:
-    prune: true
-    selfHeal: true
-  syncOptions:
-    - CreateNamespace=true
-sources:
-  - repoURL: 'https://istio-release.storage.googleapis.com/charts'
-    targetRevision: 1.19.3
-    helm:
-      valueFiles:
-        - >-
-          $values/manifests/charts/istio-control/istio-discovery/ambient-values.yaml
-    chart: istiod
-  - repoURL: 'https://github.com/istio/istio.git'
-    targetRevision: HEAD
-    ref: values
+spec:
+  project: default
+  destination:
+    server: 'http://cluster-gke-cluster:8001'
+    namespace: istio-system
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
+  sources:
+    - repoURL: 'https://istio-release.storage.googleapis.com/charts'
+      targetRevision: 1.19.3
+      helm:
+        valueFiles:
+          - >-
+            $values/manifests/charts/istio-control/istio-discovery/ambient-values.yaml
+      chart: istiod
+    - repoURL: 'https://github.com/istio/istio.git'
+      targetRevision: HEAD
+      ref: values
