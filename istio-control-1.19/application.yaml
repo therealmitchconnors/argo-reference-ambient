@@ -20,6 +20,8 @@ spec:
     - repoURL: 'https://istio-release.storage.googleapis.com/charts'
       targetRevision: 1.19.3
       helm:
+        valuesObject:
+          revision: 1-19-3
         valueFiles:
           - >-
             $values/manifests/charts/istio-control/istio-discovery/ambient-values.yaml
