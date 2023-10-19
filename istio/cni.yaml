@@ -22,7 +22,7 @@ spec:
       helm:
         valueFiles:
           - >-
-            $values/manifests/charts/istio-control/istio-discovery/ambient-values.yaml
+            $values/manifests/charts/istio-cni/ambient-values.yaml
       chart: cni
     - repoURL: 'https://github.com/istio/istio.git'
       targetRevision: HEAD
