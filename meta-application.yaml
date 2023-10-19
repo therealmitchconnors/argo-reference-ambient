@@ -10,8 +10,6 @@ spec:
     namespace: argocd
     server: ''
   source:
-    directory:
-      recursive: true
     path: istio
     repoURL: 'https://github.com/therealmitchconnors/argo-reference-ambient'
     targetRevision: HEAD
