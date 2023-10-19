@@ -21,7 +21,8 @@ spec:
       targetRevision: 1.18.3
       helm:
         valuesObject:
-          cniBinDir:  "/home/kubernetes/bin"
+          cni:
+            cniBinDir:  "/home/kubernetes/bin"
         valueFiles:
           - >-
             $values/manifests/charts/istio-cni/ambient-values.yaml
