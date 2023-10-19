@@ -10,7 +10,9 @@ spec:
     namespace: argocd
     server: ''
   source:
-    path: istio-control-1.19
+    directory:
+      recursive: true
+    path: istio
     repoURL: 'https://github.com/therealmitchconnors/argo-reference-ambient'
     targetRevision: HEAD
   sources: []
