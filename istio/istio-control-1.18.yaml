@@ -7,16 +7,19 @@ metadata:
     - resources-finalizer.argocd.argoproj.io
 spec:
   project: default
-  source:
-    chart: istiod
-    repoURL: https://istio-release.storage.googleapis.com/charts
+  sources:
+  - repoURL: 'https://istio-release.storage.googleapis.com/charts'
     targetRevision: 1.18.3
     helm:
-        valuesObject:
-          revision: 1-18-3
-        valueFiles:
-          - >-
-            $values/manifests/charts/istio-control/istio-discovery/ambient-values.yaml
+      valuesObject:
+        revision: 1-18-3
+      valueFiles:
+        - >-
+          $values/manifests/charts/istio-control/istio-discovery/ambient-values.yaml
+    chart: istiod
+  - repoURL: 'https://github.com/istio/istio.git'
+    targetRevision: 1.18.3
+    ref: values
   destination:
     server: "http://cluster-gke-cluster:8001"
     namespace: istio-system
