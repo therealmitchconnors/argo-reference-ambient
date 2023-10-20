@@ -14,7 +14,7 @@ spec:
     repoURL: 'https://github.com/therealmitchconnors/argo-reference-ambient'
     targetRevision: HEAD
   sources: []
-  project: default
+  project: platform
   syncPolicy:
     automated:
       prune: true
