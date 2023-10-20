@@ -21,7 +21,7 @@ spec:
       repoURL: 'https://github.com/therealmitchconnors/argo-reference-ambient'
       targetRevision: HEAD
       helm:
-        valueObjects:
+        valuesObject:
           base:
             tags:
               default:
