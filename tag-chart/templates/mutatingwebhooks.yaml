@@ -9,7 +9,6 @@
       namespace: {{ .Release.Namespace }}
       path: "{{ .injectionPath }}"
     {{- end }}
-    caBundle: ""
   sideEffects: None
   rules:
     - operations: [ "CREATE" ]
