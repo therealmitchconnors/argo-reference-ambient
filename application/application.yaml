@@ -1,0 +1,21 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: bookinfo-application
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    name: 'http://cluster-gke-cluster:8001'
+    namespace: ambient
+    server: ''
+  source:
+    path: application
+    repoURL: 'https://github.com/therealmitchconnors/argo-reference-ambient'
+    targetRevision: HEAD
+  sources: []
+  project: application
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true

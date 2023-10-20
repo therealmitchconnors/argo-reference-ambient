@@ -9,11 +9,13 @@ spec:
     name: in-cluster
     namespace: argocd
     server: ''
-  source:
-    path: istio
+  sources:
+  - path: istio
     repoURL: 'https://github.com/therealmitchconnors/argo-reference-ambient'
     targetRevision: HEAD
-  sources: []
+  - path: application/application.yaml
+    repoURL: 'https://github.com/therealmitchconnors/argo-reference-ambient'
+    targetRevision: HEAD
   project: platform
   syncPolicy:
     automated:
