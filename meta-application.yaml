@@ -13,9 +13,11 @@ spec:
   - path: istio
     repoURL: 'https://github.com/therealmitchconnors/argo-reference-ambient'
     targetRevision: HEAD
-  - path: application/application.yaml
+  - path: application
     repoURL: 'https://github.com/therealmitchconnors/argo-reference-ambient'
     targetRevision: HEAD
+    directory:
+      include: application.yaml
   project: platform
   syncPolicy:
     automated:
