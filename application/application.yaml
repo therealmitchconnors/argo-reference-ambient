@@ -13,6 +13,8 @@ spec:
     path: application
     repoURL: 'https://github.com/therealmitchconnors/argo-reference-ambient'
     targetRevision: HEAD
+    directory:
+      exclude: application.yaml
   sources: []
   project: application
   syncPolicy:
