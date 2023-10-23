@@ -21,6 +21,7 @@ spec:
       targetRevision: 1.18.3
       helm:
         valuesObject:
+          revision: rapid
           cni:
             cniBinDir:  "/home/kubernetes/bin"
         valueFiles:

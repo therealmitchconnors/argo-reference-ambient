@@ -11,6 +11,9 @@ spec:
     repoURL: 'https://istio-release.storage.googleapis.com/charts'
     targetRevision: 1.18.3
     chart: ztunnel
+    helm:
+      valuesObject:
+        revision: rapid
   destination:
     server: 'http://cluster-gke-cluster:8001'
     namespace: istio-system
