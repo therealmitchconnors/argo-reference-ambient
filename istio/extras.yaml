@@ -11,6 +11,8 @@ spec:
     repoURL: 'https://github.com/istio/istio.git'
     targetRevision: HEAD
     path: samples/addons
+    directory:
+      exclude: loki.yaml
   destination:
     server: 'http://cluster-gke-cluster:8001'
     namespace: istio-system

@@ -6,12 +6,10 @@ spec:
   generators:
   - list:
       elements:
-        - version: 1.18.3
-          revision: 1-18-3
+        - version: 1.18.4
+          revision: 1-18-4
         - version: 1.19.3
           revision: 1-19-3
-        - version: 1.20.0-beta.0
-          revision: 1-20-beta
   template:
     metadata:
       name: 'istio-control-{{revision}}'

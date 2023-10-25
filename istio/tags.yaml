@@ -25,8 +25,8 @@ spec:
           base:
             tags:
               default:
-                revision: "1-18-3"
+                revision: "1-19-3"
               stable:
-                revision: "1-18-3"
+                revision: "1-18-4"
               rapid:
                 revision: "1-19-3"
