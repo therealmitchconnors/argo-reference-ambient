@@ -25,7 +25,7 @@ spec:
           base:
             tags:
               default:
-                revision: "1-20-beta"
+                revision: "1-18-3"
               stable:
                 revision: "1-18-3"
               rapid:
