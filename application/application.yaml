@@ -15,7 +15,6 @@ spec:
     targetRevision: HEAD
     directory:
       exclude: application.yaml
-  sources: []
   project: application
   syncPolicy:
     automated:
