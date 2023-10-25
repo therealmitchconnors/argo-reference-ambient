@@ -16,17 +16,17 @@ spec:
       selfHeal: true
     syncOptions:
       - CreateNamespace=true
-  sources:
-    - path: tag-chart
-      repoURL: 'https://github.com/therealmitchconnors/argo-reference-ambient'
-      targetRevision: HEAD
-      helm:
-        valuesObject:
-          base:
-            tags:
-              default:
-                revision: "1-18-4"
-              stable:
-                revision: "1-18-4"
-              rapid:
-                revision: "1-19-3"
+  source:
+    path: tag-chart
+    repoURL: 'https://github.com/therealmitchconnors/argo-reference-ambient'
+    targetRevision: HEAD
+    helm:
+      valuesObject:
+        base:
+          tags:
+            default:
+              revision: "1-18-4"
+            stable:
+              revision: "1-18-4"
+            rapid:
+              revision: "1-19-3"
