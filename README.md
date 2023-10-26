@@ -37,4 +37,4 @@ The meta-application.yaml file is an App-of-Apps that references all other appli
 
 ## Playbook: Major Version Upgrade
 
-[diag]: ./blob/master/argo-reference-arch.svg "Logo Title Text 2"
+[diag]: ./documentation/argo-reference-arch.svg "Logo Title Text 2"
