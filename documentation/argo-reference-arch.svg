@@ -1,0 +1,332 @@
+<svg width="840" height="905" viewBox="0 0 630 678.75" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="translate(1.9192688499619193,532.2615194211728) scale(0.4798172124904798)">
+<title>G</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-808 1309,-808 1309,4 -4,4"/>
+<g id="clust1" class="cluster">
+<title>cluster_0</title>
+<polygon fill="lightgrey" stroke="lightgrey" points="8,-383 8,-697 848.21,-697 848.21,-383 8,-383"/>
+<text text-anchor="middle" x="428.11" y="-664.2" font-family="Arial" font-size="32">ArgoCD Cluster</text>
+</g>
+<g id="clust2" class="cluster">
+<title>cluster_1</title>
+<polygon fill="deepskyblue" stroke="deepskyblue" points="1022.51,-8 1022.51,-796 1305,-796 1305,-8 1022.51,-8"/>
+<text text-anchor="middle" x="1163.76" y="-763.2" font-family="Arial" font-size="32">Application Cluster</text>
+</g>
+<g id="clust3" class="cluster">
+<title>cluster_istio</title>
+<polygon fill="none" stroke="black" points="1063.16,-275 1063.16,-742 1263.35,-742 1263.35,-275 1063.16,-275"/>
+<text text-anchor="middle" x="1163.26" y="-716.4" font-family="Arial" font-size="24">NS istio-system</text>
+</g>
+<g id="clust4" class="cluster">
+<title>cluster_app</title>
+<polygon fill="none" stroke="black" points="1053.51,-16 1053.51,-267 1273,-267 1273,-16 1053.51,-16"/>
+<text text-anchor="middle" x="1163.26" y="-241.4" font-family="Arial" font-size="24">NS ambient</text>
+</g>
+<!-- meta -->
+<g id="node1" class="node application">
+<title>meta</title>
+<ellipse fill="rgb(255, 255, 255)" stroke="rgb(255, 255, 255)" cx="120.97" cy="-490" rx="104.93" ry="18"/>
+<text text-anchor="middle" x="120.97" y="-485.8" font-family="Arial" font-size="14.00">meta-application.yaml</text>
+</g>
+<!-- istio -->
+<g id="node3" class="node application">
+<title>istio</title>
+<ellipse fill="rgb(255, 255, 255)" stroke="rgb(255, 255, 255)" cx="391.07" cy="-517" rx="34.8" ry="18"/>
+<text text-anchor="middle" x="391.07" y="-512.8" font-family="Arial" font-size="14.00">istio/*</text>
+</g>
+<!-- meta&#45;&gt;istio -->
+<g id="edge2" class="edge">
+<title>meta-&gt;istio</title>
+<path fill="none" stroke="black" d="M211.99,-499.07C257.4,-503.64 310.4,-508.98 346.69,-512.63"/>
+<polygon fill="black" stroke="black" points="346.63,-516.14 356.93,-513.66 347.33,-509.18 346.63,-516.14"/>
+</g><g id="edge1" class="edge">
+<title>meta-&gt;app</title>
+<path fill="none" stroke="black" d="M211.99,-480.93C232.47,-478.87 254.5,-476.65 275.85,-474.5"/>
+<polygon fill="black" stroke="black" points="276.33,-477.97 285.93,-473.49 275.63,-471.01 276.33,-477.97"/>
+</g>
+<!-- app -->
+<g id="node2" class="node application">
+<title>app</title>
+<ellipse fill="rgb(255, 255, 255)" stroke="rgb(255, 255, 255)" cx="391.07" cy="-463" rx="129.27" ry="18"/>
+<text text-anchor="middle" x="391.07" y="-458.8" font-family="Arial" font-size="14.00">application/application.yaml</text>
+</g>
+<!-- meta&#45;&gt;app -->
+
+<!-- cni -->
+<g id="node4" class="node application">
+<title>cni</title>
+<ellipse fill="rgb(255, 255, 255)" stroke="rgb(255, 255, 255)" cx="698.21" cy="-625" rx="66.12" ry="18"/>
+<text text-anchor="middle" x="698.21" y="-620.8" font-family="Arial" font-size="14.00">istio/cni.yaml</text>
+</g>
+<!-- istio&#45;&gt;cni -->
+<g id="edge3" class="edge">
+<title>istio-&gt;cni</title>
+<path fill="none" stroke="black" d="M414.34,-530.42C445.16,-548.41 503.03,-580.15 556.2,-598 579.05,-605.67 604.75,-611.4 627.9,-615.55"/>
+<polygon fill="black" stroke="black" points="627.54,-619.04 637.99,-617.3 628.73,-612.15 627.54,-619.04"/>
+</g>
+<!-- cpt -->
+<g id="node5" class="node application">
+<title>cpt</title>
+<ellipse fill="rgb(255, 255, 255)" stroke="rgb(255, 255, 255)" cx="698.21" cy="-571" rx="142.01" ry="18"/>
+<text text-anchor="middle" x="698.21" y="-566.8" font-family="Arial" font-size="14.00">istio/control-plane-appset.yaml</text>
+</g>
+<!-- istio&#45;&gt;cpt -->
+<g id="edge4" class="edge">
+<title>istio-&gt;cpt</title>
+<path fill="none" stroke="black" d="M424.15,-522.68C466.61,-530.19 543.28,-543.76 604.59,-554.61"/>
+<polygon fill="black" stroke="black" points="604.22,-558.1 614.68,-556.39 605.44,-551.21 604.22,-558.1"/>
+</g>
+<!-- ztunnel -->
+<g id="node6" class="node application">
+<title>ztunnel</title>
+<ellipse fill="rgb(255, 255, 255)" stroke="rgb(255, 255, 255)" cx="698.21" cy="-517" rx="85.21" ry="18"/>
+<text text-anchor="middle" x="698.21" y="-512.8" font-family="Arial" font-size="14.00">istio/ztunnel.yaml</text>
+</g>
+<!-- istio&#45;&gt;ztunnel -->
+<g id="edge5" class="edge">
+<title>istio-&gt;ztunnel</title>
+<path fill="none" stroke="black" d="M425.89,-517C468.21,-517 542.42,-517 602.55,-517"/>
+<polygon fill="black" stroke="black" points="602.83,-520.5 612.83,-517 602.83,-513.5 602.83,-520.5"/>
+</g>
+<!-- extras -->
+<g id="node7" class="node application">
+<title>extras</title>
+<ellipse fill="rgb(255, 255, 255)" stroke="rgb(255, 255, 255)" cx="698.21" cy="-463" rx="80.02" ry="18"/>
+<text text-anchor="middle" x="698.21" y="-458.8" font-family="Arial" font-size="14.00">istio/extras.yaml</text>
+</g>
+<!-- istio&#45;&gt;extras -->
+<g id="edge6" class="edge">
+<title>istio-&gt;extras</title>
+<path fill="none" stroke="black" d="M424.15,-511.32C471.42,-502.96 561.08,-487.09 624.75,-475.82"/>
+<polygon fill="black" stroke="black" points="625.5,-479.24 634.73,-474.06 624.28,-472.35 625.5,-479.24"/>
+</g>
+<!-- tags -->
+<g id="node8" class="node application">
+<title>tags</title>
+<ellipse fill="rgb(255, 255, 255)" stroke="rgb(255, 255, 255)" cx="698.21" cy="-409" rx="72.44" ry="18"/>
+<text text-anchor="middle" x="698.21" y="-404.8" font-family="Arial" font-size="14.00">istio/tags.yaml</text>
+</g>
+<!-- istio&#45;&gt;tags -->
+<g id="edge7" class="edge">
+<title>istio-&gt;tags</title>
+<path fill="none" stroke="black" d="M425.81,-516.75C453.35,-515.02 492.15,-508.99 520.2,-490 544.09,-473.83 532.17,-451.95 556.2,-436 574.04,-424.16 595.78,-417.23 616.8,-413.24"/>
+<polygon fill="black" stroke="black" points="617.44,-416.68 626.71,-411.56 616.27,-409.78 617.44,-416.68"/>
+</g>
+<!-- appfiles -->
+<g id="node21" class="node">
+<title>appfiles</title>
+<ellipse fill="none" stroke="rgb(0, 0, 0)" cx="939.86" cy="-123" rx="63.8" ry="18"/>
+<text text-anchor="middle" x="939.86" y="-118.8" font-family="Arial" font-size="14.00">application/*</text>
+</g>
+<!-- app&#45;&gt;appfiles -->
+<g id="edge8" class="edge">
+<title>app-&gt;appfiles</title>
+<path fill="none" stroke="black" d="M420.31,-445.44C512.23,-388.28 802.69,-207.67 903.77,-144.82"/>
+<polygon fill="black" stroke="black" points="905.75,-147.71 912.4,-139.45 902.06,-141.76 905.75,-147.71"/>
+</g>
+<!-- cnichart -->
+<g id="node24" class="node helm">
+<title>cnichart</title>
+<ellipse fill="none" stroke="rgb(0, 0, 0)" cx="939.86" cy="-652" rx="27" ry="18"/>
+<text text-anchor="middle" x="939.86" y="-647.8" font-family="Arial" font-size="14.00">cni</text>
+</g>
+<!-- cni&#45;&gt;cnichart -->
+<g id="edge18" class="edge">
+<title>cni-&gt;cnichart</title>
+<path fill="none" stroke="black" d="M759.68,-631.81C804.93,-636.91 865.29,-643.71 903.11,-647.97"/>
+<polygon fill="black" stroke="black" points="902.82,-651.46 913.15,-649.1 903.6,-644.51 902.82,-651.46"/>
+</g>
+<!-- istiodchart -->
+<g id="node23" class="node helm">
+<title>istiodchart</title>
+<ellipse fill="none" stroke="rgb(0, 0, 0)" cx="939.86" cy="-571" rx="33.66" ry="18"/>
+<text text-anchor="middle" x="939.86" y="-566.8" font-family="Arial" font-size="14.00">istiod</text>
+</g>
+<!-- cpt&#45;&gt;istiodchart -->
+<g id="edge15" class="edge">
+<title>cpt-&gt;istiodchart</title>
+<path fill="none" stroke="black" d="M840.35,-571C860.52,-571 879.86,-571 895.98,-571"/>
+<polygon fill="black" stroke="black" points="896.08,-574.5 906.08,-571 896.08,-567.5 896.08,-574.5"/>
+</g>
+<!-- ztunchart -->
+<g id="node22" class="node helm">
+<title>ztunchart</title>
+<ellipse fill="none" stroke="rgb(0, 0, 0)" cx="939.86" cy="-517" rx="42.35" ry="18"/>
+<text text-anchor="middle" x="939.86" y="-512.8" font-family="Arial" font-size="14.00">ztunnel</text>
+</g>
+<!-- ztunnel&#45;&gt;ztunchart -->
+<g id="edge13" class="edge">
+<title>ztunnel-&gt;ztunchart</title>
+<path fill="none" stroke="black" d="M783.36,-517C817.99,-517 856.99,-517 887.27,-517"/>
+<polygon fill="black" stroke="black" points="887.59,-520.5 897.59,-517 887.59,-513.5 887.59,-520.5"/>
+</g>
+<!-- istiogh -->
+<g id="node25" class="node">
+<title>istiogh</title>
+<ellipse fill="none" stroke="rgb(0, 0, 0)" cx="939.86" cy="-463" rx="57.41" ry="18"/>
+<text text-anchor="middle" x="939.86" y="-458.8" font-family="Arial" font-size="14.00">istio github</text>
+</g>
+<!-- extras&#45;&gt;istiogh -->
+<g id="edge20" class="edge">
+<title>extras-&gt;istiogh</title>
+<path fill="none" stroke="black" d="M778.68,-463C809.02,-463 843.28,-463 872.31,-463"/>
+<polygon fill="black" stroke="black" points="872.34,-466.5 882.34,-463 872.34,-459.5 872.34,-466.5"/>
+</g>
+<!-- tagchart -->
+<g id="node26" class="node">
+<title>tagchart</title>
+<ellipse fill="none" stroke="rgb(0, 0, 0)" cx="939.86" cy="-382" rx="28.44" ry="18"/>
+<text text-anchor="middle" x="939.86" y="-377.8" font-family="Arial" font-size="14.00">tag*</text>
+</g>
+<!-- tags&#45;&gt;tagchart -->
+<g id="edge22" class="edge">
+<title>tags-&gt;tagchart</title>
+<path fill="none" stroke="black" d="M764.38,-401.66C808.4,-396.7 864.96,-390.33 901.55,-386.2"/>
+<polygon fill="black" stroke="black" points="902.23,-389.65 911.78,-385.05 901.45,-382.69 902.23,-389.65"/>
+</g>
+<!-- istiod18 -->
+<g id="node9" class="node">
+<title>istiod18</title>
+<ellipse fill="rgb(255, 255, 255)" stroke="rgb(255, 255, 255)" cx="1163.26" cy="-571" rx="92.19" ry="18"/>
+<text text-anchor="middle" x="1163.26" y="-566.8" font-family="Arial" font-size="14.00">Istio 1.18.5 Control</text>
+</g>
+<!-- istiod19 -->
+<g id="node10" class="node">
+<title>istiod19</title>
+<ellipse fill="rgb(255, 255, 255)" stroke="rgb(255, 255, 255)" cx="1163.26" cy="-625" rx="92.19" ry="18"/>
+<text text-anchor="middle" x="1163.26" y="-620.8" font-family="Arial" font-size="14.00">Istio 1.19.3 Control</text>
+</g>
+<!-- ztunnelds -->
+<g id="node11" class="node">
+<title>ztunnelds</title>
+<ellipse fill="rgb(255, 255, 255)" stroke="rgb(255, 255, 255)" cx="1163.26" cy="-517" rx="42.35" ry="18"/>
+<text text-anchor="middle" x="1163.26" y="-512.8" font-family="Arial" font-size="14.00">ztunnel</text>
+</g>
+<!-- cnids -->
+<g id="node12" class="node">
+<title>cnids</title>
+<ellipse fill="rgb(255, 255, 255)" stroke="rgb(255, 255, 255)" cx="1163.26" cy="-679" rx="27" ry="18"/>
+<text text-anchor="middle" x="1163.26" y="-674.8" font-family="Arial" font-size="14.00">cni</text>
+</g>
+<!-- extrads -->
+<g id="node13" class="node">
+<title>extrads</title>
+<ellipse fill="rgb(255, 255, 255)" stroke="rgb(255, 255, 255)" cx="1163.26" cy="-463" rx="80.06" ry="18"/>
+<text text-anchor="middle" x="1163.26" y="-458.8" font-family="Arial" font-size="14.00">prometheus, etc</text>
+</g>
+<!-- tagdef -->
+<g id="node14" class="node">
+<title>tagdef</title>
+<ellipse fill="rgb(255, 255, 255)" stroke="rgb(255, 255, 255)" cx="1163.26" cy="-301" rx="91.69" ry="18"/>
+<text text-anchor="middle" x="1163.26" y="-296.8" font-family="Arial" font-size="14.00">tag default-&gt;1.18.5</text>
+</g>
+<!-- tagrap -->
+<g id="node15" class="node">
+<title>tagrap</title>
+<ellipse fill="rgb(255, 255, 255)" stroke="rgb(255, 255, 255)" cx="1163.26" cy="-409" rx="84.14" ry="18"/>
+<text text-anchor="middle" x="1163.26" y="-404.8" font-family="Arial" font-size="14.00">tag rapid-&gt;1.19.3</text>
+</g>
+<!-- tagsta -->
+<g id="node16" class="node">
+<title>tagsta</title>
+<ellipse fill="rgb(255, 255, 255)" stroke="rgb(255, 255, 255)" cx="1163.26" cy="-355" rx="88.73" ry="18"/>
+<text text-anchor="middle" x="1163.26" y="-350.8" font-family="Arial" font-size="14.00">tag stable-&gt;1.18.5</text>
+</g>
+<!-- appcontents -->
+<g id="node17" class="node">
+<title>appcontents</title>
+<ellipse fill="rgb(255, 255, 255)" stroke="rgb(255, 255, 255)" cx="1163.26" cy="-204" rx="52.83" ry="18"/>
+<text text-anchor="middle" x="1163.26" y="-199.8" font-family="Arial" font-size="14.00">App Pods</text>
+</g>
+<!-- appwp -->
+<g id="node18" class="node">
+<title>appwp</title>
+<ellipse fill="rgb(255, 255, 255)" stroke="rgb(255, 255, 255)" cx="1163.26" cy="-150" rx="75.97" ry="18"/>
+<text text-anchor="middle" x="1163.26" y="-145.8" font-family="Arial" font-size="14.00">App Waypoints</text>
+</g>
+<!-- ig -->
+<g id="node19" class="node">
+<title>ig</title>
+<ellipse fill="rgb(255, 255, 255)" stroke="rgb(255, 255, 255)" cx="1163.26" cy="-96" rx="83.49" ry="18"/>
+<text text-anchor="middle" x="1163.26" y="-91.8" font-family="Arial" font-size="14.00">Ingress Gateway</text>
+</g>
+<!-- nwc -->
+<g id="node20" class="node">
+<title>nwc</title>
+<ellipse fill="rgb(255, 255, 255)" stroke="rgb(255, 255, 255)" cx="1163.26" cy="-42" rx="101.99" ry="18"/>
+<text text-anchor="middle" x="1163.26" y="-37.8" font-family="Arial" font-size="14.00">App Network Configs</text>
+</g>
+<!-- appfiles&#45;&gt;appcontents -->
+<g id="edge9" class="edge">
+<title>appfiles-&gt;appcontents</title>
+<path fill="none" stroke="black" d="M961.72,-140.16C977.49,-152.26 1000.17,-167.88 1022.51,-177 1047.54,-187.22 1076.71,-193.64 1101.9,-197.63"/>
+<polygon fill="black" stroke="black" points="1101.66,-201.13 1112.06,-199.15 1102.69,-194.21 1101.66,-201.13"/>
+</g>
+<!-- appfiles&#45;&gt;appwp -->
+<g id="edge10" class="edge">
+<title>appfiles-&gt;appwp</title>
+<path fill="none" stroke="black" d="M998.74,-130.06C1025.1,-133.27 1056.68,-137.12 1085.02,-140.58"/>
+<polygon fill="black" stroke="black" points="1084.95,-144.1 1095.3,-141.83 1085.8,-137.15 1084.95,-144.1"/>
+</g>
+<!-- appfiles&#45;&gt;ig -->
+<g id="edge11" class="edge">
+<title>appfiles-&gt;ig</title>
+<path fill="none" stroke="black" d="M998.74,-115.94C1023.51,-112.92 1052.88,-109.34 1079.85,-106.05"/>
+<polygon fill="black" stroke="black" points="1080.55,-109.49 1090.06,-104.81 1079.71,-102.54 1080.55,-109.49"/>
+</g>
+<!-- appfiles&#45;&gt;nwc -->
+<g id="edge12" class="edge">
+<title>appfiles-&gt;nwc</title>
+<path fill="none" stroke="black" d="M961.72,-105.84C977.49,-93.74 1000.17,-78.12 1022.51,-69 1037.38,-62.93 1053.71,-58.2 1069.8,-54.52"/>
+<polygon fill="black" stroke="black" points="1070.74,-57.9 1079.77,-52.37 1069.26,-51.06 1070.74,-57.9"/>
+</g>
+<!-- ztunchart&#45;&gt;ztunnelds -->
+<g id="edge14" class="edge">
+<title>ztunchart-&gt;ztunnelds</title>
+<path fill="none" stroke="black" d="M982.24,-517C1018.66,-517 1071.83,-517 1110.95,-517"/>
+<polygon fill="black" stroke="black" points="1111.08,-520.5 1121.08,-517 1111.08,-513.5 1111.08,-520.5"/>
+</g>
+<!-- istiodchart&#45;&gt;istiod18 -->
+<g id="edge16" class="edge">
+<title>istiodchart-&gt;istiod18</title>
+<path fill="none" stroke="black" d="M973.53,-571C996.76,-571 1029.31,-571 1060.85,-571"/>
+<polygon fill="black" stroke="black" points="1061.04,-574.5 1071.04,-571 1061.04,-567.5 1061.04,-574.5"/>
+</g>
+<!-- istiodchart&#45;&gt;istiod19 -->
+<g id="edge17" class="edge">
+<title>istiodchart-&gt;istiod19</title>
+<path fill="none" stroke="black" d="M968.19,-581.01C983.92,-586.53 1004.16,-593.22 1022.51,-598 1041.84,-603.04 1062.9,-607.59 1082.66,-611.46"/>
+<polygon fill="black" stroke="black" points="1082.08,-614.91 1092.56,-613.36 1083.4,-608.03 1082.08,-614.91"/>
+</g>
+<!-- cnichart&#45;&gt;cnids -->
+<g id="edge19" class="edge">
+<title>cnichart-&gt;cnids</title>
+<path fill="none" stroke="black" d="M966.69,-655.15C1006.19,-659.97 1081.7,-669.18 1126.45,-674.63"/>
+<polygon fill="black" stroke="black" points="1126.24,-678.13 1136.59,-675.87 1127.09,-671.19 1126.24,-678.13"/>
+</g>
+<!-- istiogh&#45;&gt;extrads -->
+<g id="edge21" class="edge">
+<title>istiogh-&gt;extrads</title>
+<path fill="none" stroke="black" d="M997.3,-463C1020.26,-463 1047.36,-463 1072.88,-463"/>
+<polygon fill="black" stroke="black" points="1072.95,-466.5 1082.95,-463 1072.95,-459.5 1072.95,-466.5"/>
+</g>
+<!-- tagchart&#45;&gt;tagdef -->
+<g id="edge23" class="edge">
+<title>tagchart-&gt;tagdef</title>
+<path fill="none" stroke="black" d="M957.88,-367.82C973.65,-355.42 998.28,-337.89 1022.51,-328 1038.77,-321.36 1056.76,-316.33 1074.28,-312.52"/>
+<polygon fill="black" stroke="black" points="1075.44,-315.86 1084.53,-310.42 1074.03,-309 1075.44,-315.86"/>
+</g>
+<!-- tagchart&#45;&gt;tagrap -->
+<g id="edge24" class="edge">
+<title>tagchart-&gt;tagrap</title>
+<path fill="none" stroke="black" d="M968.01,-385.31C995.73,-388.69 1040.17,-394.11 1079.55,-398.91"/>
+<polygon fill="black" stroke="black" points="1079.36,-402.42 1089.71,-400.15 1080.2,-395.47 1079.36,-402.42"/>
+</g>
+<!-- tagchart&#45;&gt;tagsta -->
+<g id="edge25" class="edge">
+<title>tagchart-&gt;tagsta</title>
+<path fill="none" stroke="black" d="M968.01,-378.69C995.04,-375.39 1037.95,-370.16 1076.58,-365.45"/>
+<polygon fill="black" stroke="black" points="1077.32,-368.88 1086.82,-364.2 1076.47,-361.94 1077.32,-368.88"/>
+</g>
+</g>
+</svg>
