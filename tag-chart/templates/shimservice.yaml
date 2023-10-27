@@ -27,5 +27,5 @@ spec:
       protocol: TCP
   selector:
     app: istiod
-    istio.io/rev: {{ .Values.base.tags.default.revision }}
+    istio.io/rev: {{ .Values.base.zt-shim }}
 {{- end }}
