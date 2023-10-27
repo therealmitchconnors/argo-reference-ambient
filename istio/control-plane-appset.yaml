@@ -6,6 +6,8 @@ spec:
   generators:
   - list:
       elements:
+        - version: 1.19.3
+          revision: 1-19-3
         - version: 1.18.5
           revision: 1-18-5
   template:
