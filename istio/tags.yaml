@@ -29,5 +29,5 @@ spec:
             stable:
               revision: "1-18-5"
             rapid:
-              revision: "1-18-5"
+              revision: "1-19-3"
           ztshim: "1-19-3"
