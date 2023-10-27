@@ -30,4 +30,4 @@ spec:
               revision: "1-19-3"
             rapid:
               revision: "1-19-3"
-          zt-shim: "1-19-3"
+          ztshim: "1-19-3"
