@@ -27,7 +27,7 @@ spec:
             default:
               revision: "1-19-3"
             stable:
-              revision: "1-18-5"
+              revision: "1-19-3"
             rapid:
               revision: "1-19-3"
           ztshim: "1-19-3"
