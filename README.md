@@ -30,8 +30,6 @@ The meta-application.yaml file is an App-of-Apps that references all other appli
 
 ![architecture diagram][layout]
 
-TODO: note on what's different in ambient upgrades.
-
 # Principles
 
 The [GitOps Principles](https://opengitops.dev/) guide this reference architecture.  With the exception of [./meta-application.yaml](./meta-application.yaml) (the bootstrap file), Git is the source of truth for all components of our application.  Changes to all components of Istio, including the data plane, are initiated with a pull request.  Likewise, rollbacks are as simple as a revert.  
