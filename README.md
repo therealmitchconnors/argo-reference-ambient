@@ -12,15 +12,15 @@ Istio Ambient Mesh is still in Alpha, and is not suitable for production use.  L
 ## Getting Started
 
 This reference architecture assumes that you have an ArgoCD installation with:
- * Cluster
- * Projects
- * Repository Connection
+ * A [connected cluster](https://argo-cd.readthedocs.io/en/stable/user-guide/commands/argocd_cluster/) named `ambient-cluster`
+ * A connection to your repository (for private repos)
 
 To deploy Istio, supporting software, and the bookinfo sample application, fork and clone this repository and run:
 
 ```
-TODO: modify repo links to point to your repo
-TODO: modify cluster links to point to your cluster
+read -p 'Please enter the URL to your repo:'
+OLD_REPO='https://github.com/therealmitchconnors/argo-reference-ambient'
+find . \( -type d -name .git -prune \) -o -type f -name '*.yaml' -print0 | xargs -0 sed -i s,$OLD_REPO,$NEW_REPO,g
 argocd create application -f meta-application.json
 ```
 
