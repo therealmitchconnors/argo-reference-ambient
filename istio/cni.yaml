@@ -8,7 +8,7 @@ metadata:
 spec:
   project: platform
   destination:
-    server: 'http://cluster-gke-cluster:8001'
+    name: cluster-gke
     namespace: kube-system
   syncPolicy:
     automated:
