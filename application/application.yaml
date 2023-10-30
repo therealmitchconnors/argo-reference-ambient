@@ -15,7 +15,7 @@ spec:
     targetRevision: HEAD
     directory:
       exclude: application.yaml
-  project: application
+  project: default
   syncPolicy:
     automated:
       prune: true
