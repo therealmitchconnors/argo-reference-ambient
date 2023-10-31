@@ -10,6 +10,10 @@ spec:
         revision: 1-18-3
       - version: 1.19.1
         revision: 1-19-1
+      - version: 1.18.5
+        revision: 1-18-5
+      - version: 1.19.3
+        revision: 1-19-3
   template:
     metadata:
       name: 'istio-control-{{revision}}'
