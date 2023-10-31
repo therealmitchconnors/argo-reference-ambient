@@ -33,7 +33,7 @@ spec:
         targetRevision: HEAD
         ref: values
       destination:
-        server: "http://cluster-gke-cluster:8001"
+        name: ambient-cluster
         namespace: istio-system
       syncPolicy:
         automated:
