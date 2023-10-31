@@ -3,6 +3,8 @@ kind: Gateway
 metadata:
   annotations:
     istio.io/for-service-account: bookinfo-reviews
+  labels:
+    istio.io/rev: rapid
   name: bookinfo-reviews
 spec:
   gatewayClassName: istio-waypoint
