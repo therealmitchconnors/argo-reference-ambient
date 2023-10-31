@@ -25,9 +25,9 @@ spec:
         base:
           tags:
             default:
-              revision: "1-19-3"
+              revision: "1-18-3"
             stable:
-              revision: "1-19-3"
+              revision: "1-18-3"
             rapid:
-              revision: "1-19-3"
-          ztshim: "1-19-3"
+              revision: "1-19-1"
+          ztshim: "1-18-3"
