@@ -37,6 +37,15 @@ spec:
     - path:
         type: PathPrefix
         value: /static
+    - path:
+        type: PathPrefix
+        value: /requests
+    - path:
+        type: PathPrefix
+        value: /exceptions
+    - path:
+        type: PathPrefix
+        value: /tasks
     backendRefs:
     - name: loadgen
       port: 8089
