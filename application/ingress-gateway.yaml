@@ -24,6 +24,9 @@ spec:
     - path:
         type: PathPrefix
         value: /locust
+    - path:
+        type: PathPrefix
+        value: /static
     filters:
     - type: URLRewrite
       urlRewrite:
