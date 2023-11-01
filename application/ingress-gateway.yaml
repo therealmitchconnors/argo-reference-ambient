@@ -39,7 +39,7 @@ spec:
         value: /static
     - path:
         type: PathPrefix
-        value: /requests
+        value: /stats
     - path:
         type: PathPrefix
         value: /exceptions
