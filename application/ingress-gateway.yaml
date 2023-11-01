@@ -22,6 +22,36 @@ spec:
   rules:
   - matches:
     - path:
+        type: PathPrefix
+        value: /locust
+    filters:
+    - type: URLRewrite
+      urlRewrite:
+        path:
+          type: ReplacePrefixMatch
+          replacePrefixMatch: /
+  - matches:
+    - path:
+        type: Exact
+        value: /tasks
+      method: GET
+    - path:
+        type: Exact
+        value: /requests
+      method: GET
+    - path:
+        type: Exact
+        value: /exceptions
+      method: GET
+    - path:
+        type: Exact
+        value: /
+      method: GET
+    backendRefs:
+    - name: loadgen
+      port: 8089
+  - matches:
+    - path:
         type: Exact
         value: /productpage
     - path:
