@@ -36,21 +36,22 @@ spec:
         ports:
         - containerPort: 9080
 ---
-apiVersion: security.istio.io/v1beta1
-kind: AuthorizationPolicy
+apiVersion: batch/v1
+kind: CronJob
 metadata:
-  name: loadgen
+  name: reset-locust-stats
 spec:
-  action: DENY
-  rules: 
-  - from:
-    - source:
-        principals: ["cluster.local/ns/ambient/sa/bookinfo-gateway-istio"]
-    to:
-    - operation:
-        methods: ["GET"]
-        paths: ["/stats/reset*", "/swarm*", "/stop*"]
-        ports: ["8089"]
-    - operation:
-        methods: ["POST", "PUT", "PATCH", "DELETE"]
-        ports: ["8089"]
+  schedule: "35 0/6 * * *"
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+          - name: resetter
+            image: alpine:latest
+            imagePullPolicy: IfNotPresent
+            command:
+            - /bin/sh
+            - -c
+            - "wget loadgen:8089/stats/reset"
+          restartPolicy: OnFailure
