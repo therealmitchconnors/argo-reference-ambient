@@ -35,3 +35,22 @@ spec:
         args: ["-h","http://bookinfo-gateway-istio","-u","50","-r","1"]
         ports:
         - containerPort: 9080
+---
+apiVersion: security.istio.io/v1beta1
+kind: AuthorizationPolicy
+metadata:
+  name: loadgen
+spec:
+  action: DENY
+  rules: 
+  - from:
+    - source:
+        principals: ["cluster.local/ns/ambient/sa/bookinfo-gateway-istio"]
+    to:
+    - operation:
+        methods: ["GET"]
+        paths: ["/reset*", "/swarm*", "/stop*"]
+        ports: ["8089"]
+    - operation:
+        methods: ["POST", "PUT", "PATCH", "DELETE"]
+        ports: ["8089"]
