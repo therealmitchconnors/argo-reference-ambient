@@ -24,15 +24,19 @@ spec:
     - path:
         type: PathPrefix
         value: /locust
-    - path:
-        type: PathPrefix
-        value: /static
     filters:
     - type: URLRewrite
       urlRewrite:
         path:
           type: ReplacePrefixMatch
           replacePrefixMatch: /
+    backendRefs:
+    - name: loadgen
+      port: 8089
+  - matches:
+    - path:
+        type: PathPrefix
+        value: /static
     backendRefs:
     - name: loadgen
       port: 8089
