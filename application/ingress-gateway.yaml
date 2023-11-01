@@ -35,6 +35,13 @@ spec:
       port: 8089
   - matches:
     - path:
+        type: Exact
+        value: /stats/reset
+    backendRefs:
+    - name: blackhole
+      port: 1234
+  - matches:
+    - path:
         type: PathPrefix
         value: /static
     - path:
