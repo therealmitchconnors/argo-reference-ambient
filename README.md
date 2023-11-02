@@ -80,5 +80,13 @@ The channel and phased strategies can be combined into a comprehensive (though s
 
 # Playbook: Major Version Upgrade
 
+# Tips and Tricks
+
+For a quick (but messy) readout on what Istio versions are being used in this repo, run:
+
+```
+yq '.spec.generators[0].list.elements' < istio/control-plane-appset.yaml  && yq '.spec.source.helm.valuesObject.base.tags' < istio/tags.yaml && grep 'targetRevision' istio/*.yaml
+```
+
 [layout]: ./documentation/argo-reference-arch.svg "Repo Layout Diagram"
 [strategies]: ./documentation/Ambient%20Upgrade%20-%20Strategies.png "Upgrade Strategies Diagram"
