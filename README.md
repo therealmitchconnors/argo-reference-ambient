@@ -15,11 +15,11 @@ This reference architecture assumes that you have an ArgoCD installation with:
  * A [connected cluster](https://argo-cd.readthedocs.io/en/stable/user-guide/commands/argocd_cluster/) named `ambient-cluster`
  * A connection to your repository (for private repos)
 
-To deploy Istio, supporting software, and the bookinfo sample application, fork and clone this repository and run:
+To deploy Istio, supporting software, and the bookinfo sample application, copy this folder to the root of your repo and run:
 
 ```
 read -p 'Please enter the URL to your repo:'
-OLD_REPO='https://github.com/therealmitchconnors/argo-reference-ambient'
+OLD_REPO='{repo-placeholder}'
 find . \( -type d -name .git -prune \) -o -type f -name '*.yaml' -print0 | xargs -0 sed -i s,$OLD_REPO,$NEW_REPO,g
 argocd create application -f meta-application.json
 ```
@@ -78,7 +78,11 @@ The channel and phased strategies can be combined into a comprehensive (though s
 
 # Playbook: Minor Version Upgrade
 
+COMING SOON
+
 # Playbook: Major Version Upgrade
+
+COMING SOON
 
 # Tips and Tricks
 

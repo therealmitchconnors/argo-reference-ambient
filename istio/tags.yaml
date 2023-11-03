@@ -18,7 +18,7 @@ spec:
       - CreateNamespace=true
   source:
     path: tag-chart
-    repoURL: 'https://github.com/therealmitchconnors/argo-reference-ambient'
+    repoURL: '{repo-placeholder}'
     targetRevision: HEAD
     helm:
       valuesObject:

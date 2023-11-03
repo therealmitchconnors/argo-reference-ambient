@@ -11,10 +11,10 @@ spec:
     server: ''
   sources:
   - path: istio
-    repoURL: 'https://github.com/therealmitchconnors/argo-reference-ambient'
+    repoURL: '{repo-placeholder}'
     targetRevision: HEAD
   - path: application
-    repoURL: 'https://github.com/therealmitchconnors/argo-reference-ambient'
+    repoURL: '{repo-placeholder}'
     targetRevision: HEAD
     directory:
       include: application.yaml
