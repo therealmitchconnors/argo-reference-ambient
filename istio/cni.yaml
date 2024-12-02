@@ -22,8 +22,6 @@ spec:
       helm:
         valuesObject:
           revision: rapid
-          cni:
-            cniBinDir:  "/home/kubernetes/bin"
           proflie: ambient
       chart: cni
     - repoURL: 'https://github.com/istio/istio.git'
