@@ -9,7 +9,7 @@ spec:
   project: default
   destination:
     name: ambient-cluster
-    namespace: kube-system
+    namespace: istio-system
   syncPolicy:
     automated:
       prune: true
