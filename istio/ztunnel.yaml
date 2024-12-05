@@ -13,7 +13,7 @@ spec:
     chart: ztunnel
     helm:
       valuesObject:
-        revision: rapid
+        revision: 1-22-6
   destination:
     name: ambient-cluster
     namespace: istio-system
