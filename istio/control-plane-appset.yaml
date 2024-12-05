@@ -8,6 +8,10 @@ spec:
       elements:
       - version: 1.24.1
         revision: 1-24-1
+      - version: 1.23.3
+        revision: 1-23-3
+      - version: 1.22.5
+        revision: 1-22-5
   template:
     metadata:
       name: 'istio-control-{{revision}}'
