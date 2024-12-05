@@ -16,7 +16,7 @@ spec:
     metadata:
       name: 'istio-control-{{revision}}'
     spec:
-      project: default
+      project: msft-mesh-admin
       sources:
       - repoURL: 'https://istio-release.storage.googleapis.com/charts'
         targetRevision: '{{version}}'
