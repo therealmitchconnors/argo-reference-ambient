@@ -22,7 +22,7 @@ spec:
       helm:
         valuesObject:
           revision: rapid
-          proflie: ambient
+          profile: ambient
       chart: cni
     - repoURL: 'https://github.com/istio/istio.git'
       targetRevision: HEAD
