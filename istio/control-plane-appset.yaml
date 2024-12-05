@@ -6,8 +6,8 @@ spec:
   generators:
   - list:
       elements:
-      - version: 1.22.6
-        revision: 1-22-6
+      - version: 1.24.1
+        revision: 1-24-1
   template:
     metadata:
       name: 'istio-control-{{revision}}'
