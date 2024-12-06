@@ -8,6 +8,7 @@ metadata:
 spec:
   destination:
     name: ambient-cluster
+    namespace: ambient
   source:
     path: application
     repoURL: 'https://github.com/therealmitchconnors/argo-reference-ambient'
