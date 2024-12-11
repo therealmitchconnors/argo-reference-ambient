@@ -1,5 +1,5 @@
 {{- range $revision := $.Values.revisions }}
-{{- if has "default" $revision.tags }}
+{{- if has $.Values.defaultTag $revision.tags }}
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
