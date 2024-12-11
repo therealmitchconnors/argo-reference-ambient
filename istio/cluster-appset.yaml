@@ -35,9 +35,10 @@ spec:
               tags:
               - rapid
             defaultTag: '{{ .metadata.labels.defaultChannel }}'
+            clusterName: '{{.name}}'
       destination:
-        name: '{{.name}}'
-        namespace: istio-system
+        name: in-cluster
+        namespace: argocd
       syncPolicy:
         automated:
           prune: true

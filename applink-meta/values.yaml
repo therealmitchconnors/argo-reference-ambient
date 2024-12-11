@@ -9,3 +9,4 @@ revisions:
   tags:
   - rapid
 defaultTag: stable
+clusterName: ambient-cluster
