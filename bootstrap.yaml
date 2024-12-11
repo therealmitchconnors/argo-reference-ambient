@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: meta-application
+  name: bootstrap-application
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
@@ -12,12 +12,9 @@ spec:
   sources:
   - path: istio
     repoURL: 'https://github.com/therealmitchconnors/argo-reference-ambient'
-    targetRevision: HEAD
-  - path: application
-    repoURL: 'https://github.com/therealmitchconnors/argo-reference-ambient'
-    targetRevision: HEAD
+    targetRevision: multicluster
     directory:
-      include: application.yaml
+      include: appcluster-appset.yaml
   project: default
   syncPolicy:
     automated:

@@ -1,0 +1,42 @@
+{{- range $revision := $.Values.revisions }}
+{{- if has "default" $revision.tags }}
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: istio-singletons-{{ $.Values.clusterName }}
+  namespace: argocd
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  project: msft-mesh-admin
+  destination:
+    name: {{ $.Values.clusterName }}
+    namespace: istio-system
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
+  sources:
+    - repoURL: 'https://istio-release.storage.googleapis.com/charts'
+      targetRevision: {{ $revision.version }}
+      chart: base
+      helm:
+        valuesObject:
+          proflie: ambient
+    - repoURL: 'https://istio-release.storage.googleapis.com/charts'
+      targetRevision: {{ $revision.version }}
+      chart: cni
+      helm:
+        valuesObject:
+          revision: {{ $revision.name }}
+          profile: ambient
+    - repoURL: 'https://istio-release.storage.googleapis.com/charts'
+      targetRevision: {{ $revision.version }}
+      chart: ztunnel
+      helm:
+        valuesObject:
+          revision: {{ $revision.name }}
+{{- end }}
+{{- end }}

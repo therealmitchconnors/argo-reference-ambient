@@ -1,0 +1,36 @@
+
+
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: istio-multi-control
+spec:
+  generators:
+  - list:
+      elements:
+{{- range $revision := $.Values.revisions }}
+      - version: {{ $revision.version }}
+        revision: {{ $revision.name }}
+{{- end }}
+  template:
+    metadata:
+      name: '{{ "istio-control-{{revision}}" }}'
+    spec:
+      project: msft-mesh-admin
+      sources:
+      - repoURL: 'https://istio-release.storage.googleapis.com/charts'
+        targetRevision: '{{ "{{version}}" }}'
+        helm:
+          valuesObject:
+            revision: '{{ "{{revision}}" }}'
+            profile: ambient
+        chart: istiod
+      destination:
+        name: ambient-cluster
+        namespace: istio-system
+      syncPolicy:
+        automated:
+          prune: true
+          selfHeal: true
+        syncOptions:
+          - CreateNamespace=true

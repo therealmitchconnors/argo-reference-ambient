@@ -1,0 +1,36 @@
+{{- $tagDict := dict }}
+{{- range $revision := $.Values.revisions }}
+{{- range $tag := $revision.tags }}
+{{- $entry := dict "revision" $revision.name}}
+{{- $_ := set $tagDict $tag $entry }}
+{{- end }}
+{{- end }}
+{{- $defaultRevision := get $tagDict $.Values.defaultTag }}
+{{- $_ := set $tagDict "default" $defaultRevision }}
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: istio-tags-{{ $.Values.clusterName }}
+  namespace: argocd
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  project: msft-mesh-admin
+  destination:
+    name: ambient-cluster
+    namespace: istio-system
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
+  source:
+    path: tag-chart
+    repoURL: 'https://github.com/therealmitchconnors/argo-reference-ambient'
+    targetRevision: HEAD
+    helm:
+      valuesObject:
+        base:
+          tags:
+{{- $tagDict | toYaml | nindent 12 }}

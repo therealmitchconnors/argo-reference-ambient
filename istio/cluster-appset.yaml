@@ -1,0 +1,41 @@
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: istio-multi-control
+spec:
+  generators:
+  - clusters: 
+      selector:
+        matchExpressions:
+        - { key: defaultChannel, operator: Exists }
+  template:
+    metadata:
+      name: 'applink-{{name}}'
+    spec:
+      project: msft-mesh-admin
+      sources:
+      - path: applink-meta
+        repoURL: 'https://github.com/therealmitchconnors/argo-reference-ambient'
+        targetRevision: multicluster
+        helm:
+          valuesObject:
+            revisions:
+            - name: "1-23-3"
+              version: "1.23.3"
+              tags:
+              - legacy
+              - stable
+            - name: "1-24-1"
+              version: "1.24.1"
+              tags:
+              - rapid
+            defaultTag: {{ metadata.labels.defaultChannel }}
+      destination:
+        name: {{name}}
+        namespace: istio-system
+      syncPolicy:
+        automated:
+          prune: true
+          selfHeal: true
+        syncOptions:
+          - CreateNamespace=true
