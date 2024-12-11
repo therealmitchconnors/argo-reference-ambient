@@ -14,7 +14,7 @@ spec:
     directory:
       exclude: loki.yaml
   destination:
-    name: ambient-cluster
+    name: {{ $.Values.clusterName }}
     namespace: istio-system
   syncPolicy:
     automated:

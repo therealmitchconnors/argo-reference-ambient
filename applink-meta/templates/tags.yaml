@@ -17,7 +17,7 @@ metadata:
 spec:
   project: msft-mesh-admin
   destination:
-    name: ambient-cluster
+    name: {{ $.Values.clusterName }}
     namespace: istio-system
   syncPolicy:
     automated:
