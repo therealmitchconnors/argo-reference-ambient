@@ -14,7 +14,7 @@ spec:
 {{- end }}
   template:
     metadata:
-      name: '{{ "istio-control-{{revision}}" }}'
+      name: 'istio-control-{{ $.Values.clusterName }}-{{ "{{revision}}" }}'
     spec:
       project: msft-mesh-admin
       sources:
