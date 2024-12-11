@@ -1,0 +1,24 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: gateway-crds-{{ $.Values.clusterName }}
+  namespace: argocd
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  project: msft-mesh-admin
+  destination:
+    name: {{ $.Values.clusterName }}
+    namespace: istio-system
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
+  sources:
+    - repoURL: 'https://github.com/kubernetes-sigs/gateway-api'
+      targetRevision: v1.2.0
+      path: config/crd
+
+
