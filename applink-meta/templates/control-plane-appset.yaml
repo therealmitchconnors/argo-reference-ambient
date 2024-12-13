@@ -3,7 +3,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
 metadata:
-  name: istio-multi-control
+  name: istio-multi-control-{{ $.Values.clusterName }}
 spec:
   generators:
   - list:
