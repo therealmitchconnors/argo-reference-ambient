@@ -1,8 +1,10 @@
+This readme is out of date and does not apply to the contents of this branch yet.
+
 # Ambient Reference Architecture w/ Argo
 
 This repo contains a reference architecture for operating Istio Ambient Mesh with ArgoCD using GitOps.  It demonstrates best practices for leveraging Istio as part of an application platform.
 
-## :boom: DISCLAIMER :boom:
+## :boom: DISCLAIMER - OUT OF DATE:boom:
 
 Istio Ambient Mesh is still in Alpha, and is not suitable for production use.  Likewise, this reference architecture is of Alpha quality, and includes several rough edges, including:
  * Cluster-Scoped upgrades cause known traffic loss, and have wide blast radius.
