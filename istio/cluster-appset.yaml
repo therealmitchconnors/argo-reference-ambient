@@ -29,11 +29,11 @@ spec:
               version: "1.23.3"
               tags:
               - legacy
-              - stable
             - name: "1-24-1"
               version: "1.24.1"
               tags:
               - rapid
+              - stable
             defaultTag: '{{ .metadata.labels.defaultChannel }}'
             clusterName: '{{.name}}'
       destination:
