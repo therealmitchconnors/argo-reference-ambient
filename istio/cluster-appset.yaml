@@ -27,6 +27,8 @@ spec:
             revisions:
             - name: "1-23-3"
               version: "1.23.3"
+            - name: "1-23-2"
+              version: "1.23.2"
               tags:
               - legacy
               - stable
